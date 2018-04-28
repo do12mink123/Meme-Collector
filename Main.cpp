@@ -46,7 +46,9 @@ int main() {
 		int bl = 0;
 		bool dzielaj = 1;
 		string phstr;
+		int brnowch = 0;
 		while (dzielaj) {
+			if (brnowch > 400)break;
 			string aaa = smeme[i];
 			aaa += to_string(st);
 			int timo = 0;
@@ -161,11 +163,18 @@ int main() {
 								if (z == '"')break;
 								a += z;
 							}
+							bool nowe = 0;
 							if ((a.data()[0] == '/') || (a.data()[0] == '\\')) {
-								pkol(smemeo[i] + a, konc);
+								pkol(smemeo[i] + a, konc,nowe);
 							}
 							else {
-								pkol(a, konc);
+								pkol(a, konc,nowe);
+							}
+							if (nowe) {
+								brnowch=0;
+							}
+							else {
+								brnowch++;
 							}
 						}
 					}

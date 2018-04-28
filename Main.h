@@ -118,18 +118,22 @@ std::string gh(std::string nzw) {
 	return w;
 }
 
-void zobr(std::string tempz, std::string konc) {
+void zobr(std::string tempz, std::string konc, bool &nnn) {
 	using namespace std;
 	string hash = gh(tempz);
 	hash += konc;
 	if (CopyFile(tempz.data(), (string("C:/DATA/") + hash).data(),1))
 	{
+		nnn = 1;
 		cout << hash << endl;
+	}
+	else {
+		nnn = 0;
 	}
 	DeleteFile(tempz.data());
 }
 
-void pkol(std::string adr, std::string konc) {
+void pkol(std::string adr, std::string konc,bool &nnn) {
 	HRESULT hr = URLDownloadToFile(
 		NULL,
 		adr.data(),
@@ -138,6 +142,6 @@ void pkol(std::string adr, std::string konc) {
 		NULL);
 	if (SUCCEEDED(hr))
 	{
-		zobr(std::string("temp") + konc, konc);
+		zobr(std::string("temp") + konc, konc,nnn);
 	}
 }
