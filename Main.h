@@ -122,12 +122,9 @@ void zobr(std::string tempz, std::string konc) {
 	using namespace std;
 	string hash = gh(tempz);
 	hash += konc;
-	fstream plik(hash, ios::in | ios::binary);
-	if (!plik.good()) {
-		if (CopyFile(tempz.data(), (string(" C:\\DATA\\") + hash).data(),0))
-		{
-			cout << hash << endl;
-		}
+	if (CopyFile(tempz.data(), (string("C:/DATA/") + hash).data(),1))
+	{
+		cout << hash << endl;
 	}
 	DeleteFile(tempz.data());
 }

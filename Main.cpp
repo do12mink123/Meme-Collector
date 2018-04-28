@@ -4,10 +4,6 @@
 #define ilstr 14
 
 const char *smeme[ilstr] = {
-	"http://mamtak.pl/page/",
-	"http://takmam.pl/page/",
-	"https://besty.pl/pages/",
-	"https://fabrykamemow.pl/page/",
 	"https://jbzdy.pl/strona/",
 	"https://www.chamsko.pl/page/",
 	"https://demotywatory.pl/page/",
@@ -18,13 +14,13 @@ const char *smeme[ilstr] = {
 	"http://memy.pl/?page=",
 	"http://www.hopaj.pl/hopy,",
 	"https://kwejk.pl/strona/",
+	"http://mamtak.pl/page/",
+	"http://takmam.pl/page/",
+	"https://besty.pl/pages/",
+	"https://fabrykamemow.pl/page/",
 };
 
 std::string smemeo[ilstr] = {
-	"http://mamtak.pl",
-	"http://takmam.pl",
-	"https://besty.pl",
-	"https://fabrykamemow.pl",
 	"https://jbzdy.pl",
 	"https://www.chamsko.pl",
 	"https://demotywatory.pl",
@@ -35,6 +31,10 @@ std::string smemeo[ilstr] = {
 	"http://memy.pl",
 	"http://www.hopaj.pl",
 	"https://kwejk.pl",
+	"http://mamtak.pl",
+	"http://takmam.pl",
+	"https://besty.pl",
+	"https://fabrykamemow.pl",
 };
 
 
@@ -116,7 +116,7 @@ int main() {
 							}
 						}
 						break;
-						case('g')://bmp
+						case('g')://gif
 						{
 							ttt.read(&z, 1);
 							if (z == 'i') {
@@ -128,7 +128,7 @@ int main() {
 							}
 						}
 						break;
-						case('h'):
+						case('h')://html
 						{
 							ttt.read(&z, 1);
 							if (z == 't') {

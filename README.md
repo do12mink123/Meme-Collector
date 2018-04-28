@@ -1,5 +1,5 @@
 # Meme-Collector
 
-Collects memes to C:\DATA\
+Collects memes to C:/DATA/
 
 
