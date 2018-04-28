@@ -170,9 +170,7 @@ int main() {
 						}
 					}
 				ttt.close();
-#ifndef NC
 				DeleteFile("temp.html");
-#endif // !NC
 
 			}
 			else {
